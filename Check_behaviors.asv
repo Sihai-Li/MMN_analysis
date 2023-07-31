@@ -1,0 +1,21 @@
+clear all; close all;
+
+load('D:\Uchi_data\Sly_beh\MMN_data\220531_Sly_MMN_steps.mat')
+
+num_cond = 16
+overall_cond = zeros(num_cond)
+correct_cond = zeros(num_cond)
+RT_cond = zeros(num_cond)
+for n = 1:length(beh)
+    for i = 1: num_cond
+         if beh(n).Condition == i
+             overall_cond(i) = overall_cond(i) + 1
+         end
+
+         if beh(n).TrialError == 0
+             correct_cond = correct_cond + 1
+         end
+         
+
+
+
