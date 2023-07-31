@@ -1,10 +1,8 @@
 clear all; close all;
-name = "230203 _Sly_MMN_steps.mat"
-dict = 'D:\Uchi_data\Sly_beh\MMN_data\converted_data\'
-filename = [dict+name]
-load(filename)
+name = "20230731";
+load('/Users/sihaili/Documents/Data/Sly_beh/convert_data/20230731_Sly_MMN_steps.mat');
 
-num_cond = 40
+num_cond = 36
 overall_cond = zeros(1, num_cond)
 correct_cond = zeros(1, num_cond)
 RT_cond = nan(num_cond, 200)
@@ -43,7 +41,7 @@ subplot(1,2,2)
 p2=bar(mean_RT(1:num_cond));
 title('RT')
 
-saveas(h, ['D:\Uchi_data\Sly_beh\MMN_data\converted_data\' + name+ 'test.jpg'])
+saveas(h, ['/Users/sihaili/Documents/Data/Sly_beh/convert_data/' + name+ 'test.jpg'])
 disp('finished')
 
 
