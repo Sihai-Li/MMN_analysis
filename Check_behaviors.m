@@ -1,6 +1,6 @@
 clear all; close all;
-name = "20230731";
-load('/Users/sihaili/Documents/Data/Sly_beh/convert_data/20230731_Sly_MMN_steps.mat');
+name = "20230807";
+load('/Users/sihaili/Documents/Data/Sly_beh/convert_data/20230807_Sly_MMN_steps.mat');
 
 num_cond = 36
 overall_cond = zeros(1, num_cond)
