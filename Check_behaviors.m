@@ -1,6 +1,7 @@
 clear all; close all;
-name = "20230807";
-load('/Users/sihaili/Documents/Data/Sly_beh/convert_data/20230807_Sly_MMN_steps.mat');
+name = "20230921";
+% load('/Users/sihaili/Documents/Data/Sly_beh/convert_data/20230920_Sly_MMN_steps.mat');
+load('D:\Uchi_data\Sly_beh\MMN_data\converted_data\20230921_Sly_MMN_steps(1).mat')
 
 num_cond = 36
 overall_cond = zeros(1, num_cond)
@@ -41,7 +42,7 @@ subplot(1,2,2)
 p2=bar(mean_RT(1:num_cond));
 title('RT')
 
-saveas(h, ['/Users/sihaili/Documents/Data/Sly_beh/convert_data/' + name+ 'test.jpg'])
+saveas(h, ['D:\Uchi_data\Sly_beh\MMN_data\converted_data\' + name+ 'test.jpg'])
 disp('finished')
 
 
