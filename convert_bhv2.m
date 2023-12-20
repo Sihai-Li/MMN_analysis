@@ -1,10 +1,10 @@
-Aclear all; close all; 
+clear all; close all; 
 
-output_dict = "/Users/sihaili/Documents/Data/Sly_beh/convert_data/"
-[Neurons_num Neurons_txt] = xlsread('/Users/sihaili/Documents/Data/Sly_beh/Sly_beh_list.xlsx','Sheet1');
+output_dict = "D:\Uchi_analysis\MMN\Sly_beh\MMN_data\converted_data\"
+[Neurons_num Neurons_txt] = xlsread('D:\Uchi_analysis\MMN\Sly_beh\MMN_data\Sly_MNM_list.xlsx','list');
 
 for n = 1:length(Neurons_txt)
-       beh = mlread("/Users/sihaili/Documents/Data/Sly_beh/" + Neurons_txt{n})
+       beh = mlread("D:\Uchi_analysis\MMN\Sly_beh\MMN_data\" + Neurons_txt{n})
        save((output_dict + Neurons_txt{n}(1:(length(Neurons_txt{n})-5)) + '.mat'), 'beh')
 end
 
